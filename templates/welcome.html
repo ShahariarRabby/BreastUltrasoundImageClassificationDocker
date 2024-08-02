@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="mb-4 fade-in">Welcome to Breast Ultrasound Image Classification</h1>
+            <p class="lead">Predict the classification of breast ultrasound images with our advanced AI model.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 fade-in">
+            <h3>What is Breast Cancer?</h3>
+            <p>Breast cancer is a disease where cells in the breast grow out of control. It's the most common cancer in women worldwide and the second most common cancer overall.</p>
+        </div>
+        <div class="col-md-4 fade-in">
+            <h3>Why Early Detection Matters</h3>
+            <p>Early detection of breast cancer is crucial. When caught early, breast cancer is more likely to be treated successfully. Regular screenings and advanced detection tools can save lives.</p>
+        </div>
+        <div class="col-md-4 fade-in">
+            <h3>How Our Tool Helps</h3>
+            <p>Our AI-powered tool analyzes breast ultrasound images to classify potential abnormalities. It aids in early detection by providing quick, accurate assessments to support healthcare professionals.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h2>Sample Breast Ultrasound Images</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='sample_normal.png') }}" alt="Normal Breast Ultrasound" class="img-fluid">
+            <p class="text-center mt-2">Normal</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='sample_benign.png') }}" alt="Benign Breast Ultrasound" class="img-fluid">
+            <p class="text-center mt-2">Benign</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='sample_malignant.png') }}" alt="Malignant Breast Ultrasound" class="img-fluid">
+            <p class="text-center mt-2">Malignant</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <a href="{{ url_for('disclaimer') }}" class="btn btn-primary btn-lg fade-in">Get Started</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const fadeElems = document.querySelectorAll('.fade-in');
+    fadeElems.forEach((elem, index) => {
+        setTimeout(() => {
+            elem.classList.add('visible');
+        }, 200 * index);
+    });
+});
+</script>
+{% endblock %}

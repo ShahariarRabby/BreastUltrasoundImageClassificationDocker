@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Disclaimer{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="mb-4 fade-in">Disclaimer</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This application is for research and educational purposes only and should not be used for diagnostic purposes. Please read the following carefully:</p>
+                    <ul class="text-start">
+                        <li>The AI model used in this application is experimental and has not been approved for clinical use.</li>
+                        <li>The predictions made by this application should not be considered as medical advice or a substitute for professional medical opinion.</li>
+                        <li>This tool is designed to assist healthcare professionals and should not be used for self-diagnosis.</li>
+                        <li>The accuracy of the predictions may vary and can be influenced by image quality and other factors.</li>
+                        <li>Always consult with a qualified healthcare professional for proper diagnosis and treatment of breast-related conditions.</li>
+                    </ul>
+                    <p>By using this application, you acknowledge that you understand and accept these limitations.</p>
+                </div>
+            </div>
+            <div class="mt-5 fade-in">
+                <a href="{{ url_for('accept_disclaimer') }}" class="btn btn-primary me-3">I Understand and Accept</a>
+                <a href="{{ url_for('welcome') }}" class="btn btn-secondary">Decline</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const fadeElems = document.querySelectorAll('.fade-in');
+    fadeElems.forEach((elem, index) => {
+        setTimeout(() => {
+            elem.classList.add('visible');
+        }, 200 * index);
+    });
+});
+</script>
+{% endblock %}

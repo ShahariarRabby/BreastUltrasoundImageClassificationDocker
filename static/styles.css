@@ -1,0 +1,69 @@
+body {
+    background: url('{{ url_for('static', filename='background.jpg') }}') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+a, .nav-link, .btn {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+a:hover, .nav-link:hover, .btn:hover {
+    color: #ffd700 !important;
+    text-decoration: none;
+}
+
+/* Specific styles for forms on the login and signup pages */
+.card, .form-control, .alert {
+    background-color: #f8f9fa; /* Light gray background for better visibility */
+    color: #333; /* Darker text color for readability */
+    border: 1px solid #ccc; /* Subtle border for elements */
+}
+
+.form-control:focus {
+    background-color: #e9ecef;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Adjusting label and input text color for visibility */
+.label, .form-label, .form-control {
+    color: #333; /* Dark grey text for visibility */
+}

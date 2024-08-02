@@ -1,0 +1,37 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.env
+*.venv
+
+# Virtual environment
+venv/
+.env/
+.idea/
+
+# Dependencies
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Machine learning model weights
+*.h5
+
+# Logs
+*.log
+
+# Static files
+/static/uploads/
