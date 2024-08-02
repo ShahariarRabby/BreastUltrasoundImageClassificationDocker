@@ -18,7 +18,7 @@ cd BreastUltrasoundImageClassificationDocker
 
 ### Download Model Weights
 
-Download the model weights from [Google Drive](https://drive.google.com/xxx) and place the `best_model_multi.h5` file in the root directory of the project.
+Download the model weights from [Google Drive](https://drive.google.com/file/d/1wJU2d-vGM33zcYi-Xdq5pSl-IWqqhWEL/view?usp=sharing) and place the `best_model_multi.h5` file in the root directory of the project.
 
 ### Running with Docker
 
@@ -71,7 +71,6 @@ Here are some example images used for classification:
 - **Benign**: ![Benign](static/sample_benign.png)
 - **Malignant**: ![Malignant](static/sample_malignant.png)
 - **Normal**: ![Normal](static/sample_normal.png)
-- 
 ## Screenshots
 
 Here are some screenshots of the application:
